@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const SideCart = ({watchTime}) => {
@@ -13,9 +14,8 @@ setBreakTime(bt);
 }
 
 const handleComplete=()=>{
-  const remainTime =time-breakTime;
-  localStorage.setItem("complete",remainTime);
- setTime(remainTime)
+
+toast("Wow so easy!")
 
 }
   useEffect(()=>{
@@ -34,6 +34,7 @@ const handleComplete=()=>{
     }else{
       setBreakTime(0)
     }
+
    
   },[watchTime])
 
